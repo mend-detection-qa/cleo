@@ -7,6 +7,11 @@ from dataclasses import dataclass
 from difflib import SequenceMatcher
 from functools import lru_cache
 from html.parser import HTMLParser
+from typing import TYPE_CHECKING
+
+
+if TYPE_CHECKING:
+    import urllib3
 
 
 class TagStripper(HTMLParser):
@@ -160,3 +165,18 @@ def wcswidth(s: str) -> int:
             return -1
         width += wc
     return width
+
+
+def create_http_pool() -> urllib3.PoolManager:
+    """Create a urllib3 PoolManager for making HTTP requests.
+
+    This is useful for CLI commands that need to fetch data from HTTP endpoints.
+
+    Example:
+        >>> http = create_http_pool()
+        >>> response = http.request('GET', 'https://api.example.com/data')
+        >>> print(response.status)
+    """
+    import urllib3
+
+    return urllib3.PoolManager()
