@@ -2,16 +2,12 @@ from __future__ import annotations
 
 import math
 import unicodedata
+import urllib3
 
 from dataclasses import dataclass
 from difflib import SequenceMatcher
 from functools import lru_cache
 from html.parser import HTMLParser
-from typing import TYPE_CHECKING
-
-
-if TYPE_CHECKING:
-    import urllib3
 
 
 class TagStripper(HTMLParser):
