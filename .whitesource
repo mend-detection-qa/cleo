@@ -36,15 +36,5 @@
     "workflowRules": {
       "enabled": true
     }
-  },
-   "imageSettings":{
-       "imageTracing":{
-           "enableImageTracingPR": false,
-           "addRepositoryCoordinate": false,
-           "addDockerfilePath": false,
-           "addMendIdentifier": false
-       }
-   }
+  }
 }
-
-
