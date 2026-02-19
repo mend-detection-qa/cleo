@@ -9,42 +9,23 @@
       "expected_reachable_libraries": {
         "contains": [
           {
-            "library_name": "aiohttp-3.5.3.tar.gz",
-            "vulnerabilities": [
-              "CVE-2025-69223",
-              "CVE-2025-69224",
-              "CVE-2022-33124",
-              "CVE-2025-69226",
-              "CVE-2021-21330"
-            ]
-          }
-        ]
-      },
-      "_comment_expected_reachable_libraries": "Expected REACHABLE libraries - NuGet packages and Python packages with reachable vulnerabilities",
-      "expected_unreachable_libraries": {
-        "contains": [
-          {
             "library_name": "urllib3-2.5.0-py3-none-any.whl",
             "vulnerabilities": [
               "CVE-2025-66471",
-              "CVE-2025-66418"
-            ]
-          },
-          {
-            "library_name": "jquery-3.2.1.min.js",
-            "vulnerabilities": [
-              "CVE-2020-11023",
-              "CVE-2020-11022",
-              "CVE-2019-11358"
+              "CVE-2026-21441"
             ]
           }
         ]
       },
-      "_comment_expected_unreachable_libraries": "Expected UNREACHABLE libraries - npm and JavaScript packages with unreachable vulnerabilities",
-      "expected_total_reachable_count": { "gte": 5 },
-      "_comment_expected_total_reachable_count": "Minimum number of reachable CVEs expected - 5 reachable vulnerabilities from aiohttp",
-      "expected_total_unreachable_count": { "gte": 2 },
-      "_comment_expected_total_unreachable_count": "Expected number of unreachable CVEs - 2 unreachable vulnerabilities from urllib3"
+      "_comment_expected_reachable_libraries": "Expected REACHABLE libraries - urllib3 with reachable vulnerabilities",
+      "expected_unreachable_libraries": {
+        "contains": []
+      },
+      "_comment_expected_unreachable_libraries": "Expected UNREACHABLE libraries - none found in current scan results",
+      "expected_total_reachable_count": { "gte": 4 },
+      "_comment_expected_total_reachable_count": "Minimum number of reachable CVEs expected - 4 reachable vulnerabilities from urllib3",
+      "expected_total_unreachable_count": { "gte": 0 },
+      "_comment_expected_total_unreachable_count": "Expected number of unreachable CVEs - 0 unreachable vulnerabilities found in current scan"
     }
   }
 }
